@@ -16,6 +16,7 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Vanila weather app</title>
   </head>
   <body>
@@ -24,17 +25,22 @@
         <h1 class="city">Amsterdam, Netherlands Weather</h1>
         <p class="date">Thu, Jul 28, 6:05 p.m.</p>
         <div class="row">
-          <div class="col-6 current-weather">
-            <span class="current-temperature">20 </span>
-            <a class="celcium">℃</a>
-            <a class="fahrenheit">℉</a>
-            <span class="current-icon">🌤</span>
-            <p class="feels-like">
-              <span class="label">Feels like</span>
-              <span class="value">20</span>
-            </p>
-          </div>
           <div class="col-6">
+            <div class="current-weather">
+              <span class="current-temperature">20 </span>
+              <div class="unitwrap">
+                <a class="to-celcium">℃ </a><a class="to-fahrenheit">℉</a>
+                <p class="feels-like">
+                  <span class="label">Feels like</span>
+                  <span class="value">20</span>
+                </p>
+              </div>
+
+              <div class="current-icon">🌤</div>
+            </div>
+          </div>
+
+          <div class="col-6 metrics">
             <div class="row justify-content-center">
               <div class="col detailed-metrics">
                 <div class="col detailed-metrics">
