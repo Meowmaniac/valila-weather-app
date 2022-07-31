@@ -22,40 +22,53 @@
     <div class="container">
       <div class="weather-app">
         <h1 class="city">Amsterdam, Netherlands Weather</h1>
+        <p class="date">Thu, Jul 28, 6:05 p.m.</p>
         <div class="row">
           <div class="col-6 current-weather">
-            <span class="current-temperature">20 ℃</span>
-            <span>Feels like</span>
-            <span class="feel-temperature">20</span>
+            <span class="current-temperature">20 </span>
+            <a class="celcium">℃</a>
+            <a class="fahrenheit">℉</a>
             <span class="current-icon">🌤</span>
+            <p class="feels-like">
+              <span class="label">Feels like</span>
+              <span class="value">20</span>
+            </p>
           </div>
           <div class="col-6">
             <div class="row justify-content-center">
-              <div class="col">
-                <p>Wind</p>
-                <p class="wind-speed">24 <small>km/h</small></p>
+              <div class="col detailed-metrics">
+                <div class="col detailed-metrics">
+                  <p>Wind</p>
+                  <p class="value wind">
+                    24 <small class="metric">km/h</small>
+                  </p>
+                </div>
               </div>
-              <div class="col">
+              <div class="col detailed-metrics">
                 <p>Humidity</p>
-                <p class="humidity">49 <small>%</small></p>
+                <p class="value humidity">49 <small class="metric">%</small></p>
               </div>
-              <div class="col">
+              <div class="col detailed-metrics">
                 <p>Visibility</p>
-                <p class="visibility">10 <small>km</small></p>
+                <p class="value visibility">
+                  10 <small class="metric">km</small>
+                </p>
               </div>
-              <div class="col">
+              <div class="col detailed-metrics">
                 <p>Pressure</p>
-                <p class="pressure">101.8<small>kPa</small></p>
+                <p class="value pressure">
+                  101.8<small class="metric">kPa</small>
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <small
-          ><a href="https://github.com/Meowmaniac/valila-weather-app"
+        <p class="coded-by">
+          <a href="https://github.com/Meowmaniac/valila-weather-app"
             >Open source code</a
           >
-          by Kateryna Pavlova</small
-        >
+          by Kateryna Pavlova
+        </p>
       </div>
     </div>
     <script src="src/script.js"></script>

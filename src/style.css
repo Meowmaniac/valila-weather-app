@@ -1,0 +1,110 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.weather-app {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  border: black solid 1px;
+  border-radius: 10px;
+  background-color: #2670af;
+}
+
+h1.city {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-weight: normal;
+  font-family: "DIN-Light", sans-serif;
+  font-size: 42px;
+  white-space: nowrap;
+}
+
+.detailed-metrics {
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.detailed-metrics p {
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.detailed-metrics .value {
+  display: flex;
+  font-size: 1.2em;
+  padding-right: 2px;
+}
+
+.detailed-metrics .metric {
+  font-size: 0.6em;
+  display: flex;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+  padding-top: 4px;
+}
+
+.date {
+  display: block;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.current-temperature {
+  font-size: 75px;
+  color: #ffea51;
+  line-height: normal;
+  margin-right: -20px;
+}
+
+.celcium,
+.fahrenheit {
+  display: inline-block;
+  margin-top: 20px;
+  color: #ffea51;
+  font-size: 25px;
+  vertical-align: top;
+  text-decoration: none;
+  cursor: pointer;
+}
+.celcium:hover,
+.fahrenheit:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.feels-like .label {
+  position: relative;
+  top: -20px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.feels-like .value {
+  position: relative;
+  top: -20px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.current-icon {
+  margin: 0 25px;
+  font-size: 75px;
+}
+
+.coded-by {
+  font-size: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0;
+}
+
+.coded-by a {
+  text-decoration: none;
+  color: #1cd5ff;
+}
+
+.coded-by a:hover {
+  color: white;
+}
