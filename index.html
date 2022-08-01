@@ -26,11 +26,26 @@
           <span id="city"></span>
           Weather
         </h1>
-        <p class="date" id="date">Thu, Jul 28, 6:05 p.m.</p>
+        <p class="date" id="date"></p>
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-10">
+              <input
+                type="search"
+                placeholder="Enter a city"
+                class="form-control"
+                id="city-input"
+              />
+            </div>
+            <div class="col-2">
+              <input type="submit" value="Search" class="btn btn-light" />
+            </div>
+          </div>
+        </form>
         <div class="row">
           <div class="col-6">
             <div class="current-weather">
-              <span class="current-temperature" id="temp">20 </span>
+              <span class="current-temperature" id="temp"></span>
               <div class="unitwrap">
                 <a class="to-celcium">℃ </a><a class="to-fahrenheit">℉</a>
                 <p class="feels-like">
