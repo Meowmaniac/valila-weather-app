@@ -111,9 +111,8 @@ h1.city {
   display: table-cell;
 }
 
-.current-icon {
-  margin: 0 25px;
-  font-size: 75px;
+.current-icon img {
+  height: 125px;
 }
 
 .coded-by {
@@ -139,5 +138,5 @@ h1.city {
 }
 
 .metrics .row {
-  margin-top: 15px;
+  margin-top: 25px;
 }
