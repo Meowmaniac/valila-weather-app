@@ -77,14 +77,15 @@ h1.city {
   font-size: 1.4em;
 }
 
-.unitwrap a:hover {
-  cursor: pointer;
-  color: #ffffff;
-}
-
 .to-celcium,
 .to-fahrenheit {
   text-decoration: none;
+  color: #ffea51;
+}
+
+.to-celcium:hover,
+.to-fahrenheit:hover {
+  cursor: default;
   color: #ffea51;
 }
 
@@ -139,4 +140,13 @@ h1.city {
 
 .metrics .row {
   margin-top: 25px;
+}
+
+.current-weather .active {
+  color: orange;
+  cursor: default;
+}
+
+.current-weather .active:hover {
+  cursor: default;
 }
