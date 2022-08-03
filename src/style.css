@@ -161,7 +161,8 @@ h1.city {
   text-align: center;
 }
 
-.day-forecast p {
+.forecast-date,
+.forecast-temperatures {
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.8);
 }
