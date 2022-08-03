@@ -37,38 +37,52 @@ function displayDate() {
   dateElement.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentHour}:${currentMinute}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-  let days = ["Thu", "Fri", "Sat", "Sun"];
+  let days = response.data.daily;
 
   let forecastHTML = "";
 
-  days.forEach((day) => {
-    forecastHTML =
-      forecastHTML +
-      `   <div class="col day-forecast">
-            <div class="forecast-date">${day}</div>
+  days.forEach((day, index) => {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `   <div class="col day-forecast">
+            <div class="forecast-date">${formatDay(day.dt)}</div>
             <img
               class="day-forecast-img"
-              src="http://openweathermap.org/img/wn/01d@2x.png"
+              src="http://openweathermap.org/img/wn/${
+                day.weather[0].icon
+              }@2x.png"
               alt=""
             />
             <div class="forecast-temperatures">
-              <span class="forecast-day-temperature">18°</span>
-              <span class="forecast-night-temperature">19°</span>
+              <span class="forecast-day-temperature">${Math.round(
+                day.temp.day
+              )}°</span>
+              <span class="forecast-night-temperature">${Math.round(
+                day.temp.night
+              )}°</span>
             </div>
         </div>`;
+    }
   });
 
   forecastElement.innerHTML = forecastHTML;
-
-  console.log(response.data.daily);
 }
 
 displayDate();
 
 function getForecast(coordinates) {
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -120,7 +134,6 @@ function displayCelciumTemperature(event) {
   let temperatureElement = document.querySelector("#temp");
   let feelsLikeElement = document.querySelector("#feels-like");
 
-  console.log(feelsLikeElement.value);
   fahrenheitLink.classList.remove("active");
   celciumLink.classList.add("active");
 
